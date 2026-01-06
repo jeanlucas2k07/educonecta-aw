@@ -1,0 +1,85 @@
+:root {
+    --main-color: #2166fd
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Helvetica, sans-serif;
+}
+
+header,
+ul {
+    display: flex;
+    align-items: center;
+}
+
+
+header {
+    min-width: 100vw;
+    justify-content: space-between;
+    height: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.254);
+    background-color: rgba(0, 0, 0, 0.027) ;
+    padding-inline: 9.375rem;
+
+    z-index: 10000;
+
+}
+
+header ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+    align-self: center;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+
+.links {
+    display: flex;
+}
+
+
+.links span {
+    margin-left: 15 rem;
+}
+
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+
+
+}
+
+.fa-solid.fa-question,
+.fa-regular.fa-user {
+    font-size: 1.3rem;
+}
+
+
+section {
+    min-height: 100vh;
+    padding-inline: 9.375rem;
+}
