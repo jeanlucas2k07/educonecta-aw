@@ -53,17 +53,31 @@ header ul li a {
     font-weight: 500;
 }
 
+header ul li,
+.links {
+    transition: all 0.3s ease-in-out;
+    padding: 0.2rem;
+
+}
+
+header ul li:hover,
+.links:hover{
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.385);
+    border-radius: 0.2rem;
+}
+
 
 
 .links {
     display: flex;
+    border: 3px solid white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
 }
-
-
-.links span {
-    margin-left: 15 rem;
-}
-
 
 .links a {
     color: white;
