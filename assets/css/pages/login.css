@@ -1,0 +1,404 @@
+@import url("../base/global.css");
+
+
+
+
+.main-content {
+    padding: 0;
+    display: flex;
+
+}
+
+
+header,
+ul {
+    display: flex;
+    align-items: center;
+}
+
+
+header {
+    min-width: 100vw;
+    justify-content: space-between;
+    height: 5rem;
+    margin-bottom: 1rem;
+    position: fixed;
+    padding-inline: 9.375rem;
+
+    padding-top: 5rem;
+}
+
+
+header a {
+    text-decoration: none;
+    color: #0648d9;
+}
+
+
+/* Área do formulário */
+.left {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left h1,
+.bb {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #0038B3;
+}
+
+
+
+form .title {
+    width: 100%;
+}
+
+form .title h2 {
+    font-size: 40px;
+    color: #3F445C;
+}
+
+form .title p {
+    font-size: 20px;
+    margin-bottom: 48px;
+    color: #3B3E4C;
+}
+
+form .social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 1rem;
+}
+
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    /* → 700px no seu caso */
+}
+
+.or .line {
+    flex: 1;
+    /* ocupa todo o espaço disponível */
+    height: 1px;
+    background: #ccc;
+}
+
+.or span {
+    color: #666;
+    font-size: 14px;
+}
+
+form .google-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+
+}
+
+
+form .google-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #3F445C;
+
+    gap: 1rem;
+
+
+}
+
+/* Área da imagem */
+/* Área da direita ocupando 100% da tela */
+.right {
+    background: linear-gradient(135deg, #0070f3, #0052d1);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 110%;
+    height: 100vh;
+    padding-top: 8.250rem;
+    margin: 0;
+
+
+    border-left: 2px solid rgb(255, 255, 255);
+
+    background-image: url('../../images/login_fundo.png');
+
+    background-size: contain;
+    background-position: center;
+}   
+
+h4 {
+    margin-bottom: 3.625rem;
+    font-size: 36px;
+    font-weight: 600;
+    max-width: 516px;
+    text-align: center;
+}
+
+/* Imagem encostada, sem espaço sobrando */
+/* .right img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+} */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    gap: 1rem;
+
+}
+
+
+form .inputs,
+form .input,
+.input label,
+form input,
+form button {
+    width: 100%;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form .input label {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgb(250, 250, 250);
+
+}
+
+input:focus {
+    outline: none;
+    border-color: #2166fd;
+    box-shadow: 0 0 5px rgba(33, 102, 253, 0.5);
+}
+
+button {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(135deg, #2166fd, #003bbb);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #003bbb, #2166fd);
+}
+
+
+
+@media (max-width: 1300px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        min-height: 100vh;
+        gap: 2rem;
+    }
+
+    .main-content {
+        display: flex;
+        align-items: center;
+    }
+
+
+    form {
+        max-width: 100vw;
+        display: flex;
+        padding: 0 2rem;
+        justify-content: center;
+
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        max-width: 100%;
+    }
+}
+
+/* ==== TABLET (768px - 1024px) ==== */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr 500px;
+    }
+
+    .left {
+        padding: 0 2rem;
+    }
+
+    form .title h2 {
+        font-size: 32px;
+    }
+
+    form .title p {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    .right h4 {
+        font-size: 28px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ==== MOBILE (até 768px) ==== */
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .left {
+        padding: 1rem;
+        order: 2;
+    }
+
+    form .title h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    form .title p {
+        font-size: 16px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    form {
+        max-width: 90vw;
+        gap: 1.5rem;
+    }
+
+    form .inputs {
+        gap: 1.5rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 0.75rem;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 0.75rem;
+        font-size: 16px;
+    }
+
+    .right {
+        display: none;
+    }
+}
+
+/* ==== SMALL MOBILE (até 480px) ==== */
+@media (max-width: 480px) {
+    header {
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .left {
+        padding: 0.5rem;
+    }
+
+    form .title h2 {
+        font-size: 24px;
+    }
+
+    form .title p {
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        max-width: 95vw;
+        gap: 1rem;
+    }
+
+    form .inputs {
+        gap: 1rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 0.6rem;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 0.6rem;
+        font-size: 14px;
+    }
+
+    .or {
+        gap: 0.5rem;
+    }
+
+    .or span {
+        font-size: 12px;
+    }
+}
