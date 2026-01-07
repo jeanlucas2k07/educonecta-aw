@@ -17,7 +17,7 @@ body {
 
 }
 
-#inicio::before{
+#inicio::before {
     content: "";
     position: absolute;
     inset: 0;   
