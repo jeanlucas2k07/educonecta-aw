@@ -43,7 +43,6 @@ body {
 }
 
 .home-content {
-    padding-top: 8rem;
     color: white;
     max-width: 50%; 
     position: absolute;
@@ -58,6 +57,18 @@ body {
     color: #6EE4FF;
 }
 
+
+
+.cta{
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    margin-left: 0.5rem;
+}
+
+.cta:hover {
+    transform: translateY(-5px);
+    color: chartreuse;
+}
 
 
 .cards-container {
@@ -80,12 +91,15 @@ body {
     overflow: hidden;
     transition: all 0.5s ease;
 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-radius: 0.5rem;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(0, 0, 0, 0.267);
 }
 
 
@@ -147,4 +161,11 @@ body {
 
     background-size: cover;
     background-position: center;
+}
+
+
+
+
+#sobre {
+    color: aliceblue;
 }
