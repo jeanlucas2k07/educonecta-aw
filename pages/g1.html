@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="assets/ico/img-facebook.ico" type="image/x-icon" style="border-radius: 90px;">
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            background-color: white;
+            font-family: "Inter", sans-serif;
+            padding: 0;
+        }
+
+        form {
+            background-color: transparent;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .nav-sites {
+            background-color: transparent;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            height: 55px;
+            margin: 0px 85px;
+            padding: 0%;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: inherit;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: border-bottom-color 0.3s ease;
+            font-size: 16px;
+            font-weight: 550;
+            margin: -1px;
+            height: 55px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .nav-btn:hover {
+            border-bottom-color: currentColor;
+        }
+
+        .btn-cad {
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 60px;
+        }
+
+        .btn-cad:hover {
+            color: #0669DE;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav {
+            background-color: #C4170C;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            padding: 20px 100px;
+            height: 83px;
+            position: relative;
+            /* Para possibilitar o posicionamento da logo */
+        }
+
+        .logo-img {
+            position: absolute;
+            /* Posicionamento absoluto para centralização */
+            left: 50%;
+            /* Posiciona a logo no centro da barra de navegação */
+            transform: translateX(-50%);
+            /* Centraliza exatamente */
+            height: 50px;
+        }
+
+        .main-nav button {
+            background-color: transparent;
+            border: none;
+            color: whitesmoke;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        #search-box {
+            position: relative;
+        }
+
+        #search-box input[type='search'] {
+            padding: 10px 40px 10px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #A7140A;
+            color: black;
+            font-family: Inter, sans-serif;
+            font-size: large;
+            font-weight: 600;
+            width: 175px;
+            height: 35px;
+            transition: width 0.5s ease;
+        }
+
+        #search-box input::placeholder {
+            color: #f4f4f4;
+        }
+
+        #search-box input[type='search']:focus {
+            outline: none;
+            border: none;
+        }
+
+        #search-box input:focus::placeholder {
+            color: gray;
+        }
+
+        #search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        #search-box button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #search-box input[type='search']:focus {
+            background-color: whitesmoke;
+            width: 300px;
+            transition: width 0.5s ease;
+        }
+
+        #search-input:focus+#search-button img {
+            display: none;
+            /* Hide the image when the input is focused */
+        }
+
+        .nav-3 {
+            align-items: center;
+            justify-content: end;
+            display: flex;
+            padding: 0;
+            border-bottom: 2px solid rgb(246, 246, 246);
+            height: 45px;
+            margin-top: 0;
+        }
+
+        #vasco {
+            margin-right: 130px;
+            align-items: center;
+            display: flex;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+            color: #C4170C;
+            cursor: pointer;
+        }
+
+        #vasco:hover {
+            color: #A7140A;
+            transition: color 0.3s ease;
+        }
+
+        #vasco span {
+            margin-right: 15px;
+        }
+
+        .materia-container {
+            width: 100%;
+            padding: 10px 200px;
+            /* Adiciona bordas de 200px nas laterais */
+            display: flex;
+            justify-content: center;
+        }
+
+        .materia-texto {
+            max-width: 750px;
+            /* Largura máxima para o texto */
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            color: #333;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+
+        .materia-texto h1 {
+            font-size: 35px;
+            color: black;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .materia-texto h2 {
+            font-size: 15px;
+            color: rgb(83, 81, 81);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .autor-info {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            /* Espaço entre o subtítulo e o início do texto */
+        }
+
+        .autor-info p {
+            margin: 0;
+            /* Pequeno espaçamento entre as linhas "Feito por" e "Atualizado há" */
+        }
+
+        .autor-info strong {
+            color: #333;
+            /* Cor mais escura para destacar os nomes ou horários */
+        }
+
+        .atualizado-ha p {
+            margin: 0;
+        }
+
+        .share-btns {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            width: 740px;
+            align-items: center;
+        }
+
+        .share-btns button {
+            background-color: #efefef;
+            width: 225px;
+            height: 45px;
+            border-radius: 10px;
+        }
+
+        .materia-container img {
+            width: 740px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .materia-texto p {
+            margin-bottom: 20px;
+        }
+
+        .materia-texto blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            padding-left: 10px;
+            border-left: 4px solid #C4170C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            background-color: #C4170C;
+            /* Cor de fundo vermelha */
+            color: white;
+            /* Cor do texto branca */
+            text-align: center;
+            /* Centraliza o texto */
+            padding: 20px 0;
+            /* Espaçamento em cima e embaixo */
+            width: 100%;
+            /* Garante que o footer ocupe toda a largura */
+        }
+
+        .footer-content {
+            background-color: #C4170C;
+            /* Cor de fundo do conteúdo */
+            max-width: 1000px;
+            /* Largura máxima do conteúdo */
+            margin: 0 auto;
+            /* Centraliza o conteúdo */
+            padding: 20px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            /* Remove marcadores */
+            padding: 0;
+            /* Remove espaçamento */
+            margin: 10px 0;
+            /* Espaçamento entre as listas */
+        }
+
+        .footer-nav li {
+            display: inline-block;
+            /* Exibe os itens em linha */
+            margin: 0 15px;
+            /* Espaçamento entre os itens */
+        }
+
+        .footer-nav a {
+            color: white;
+            /* Cor dos links */
+            text-decoration: none;
+            /* Remove sublinhado */
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+            /* Sublinha ao passar o mouse */
+            background-color: #A7140A;
+            /* Fundo de hover */
+        }
+
+        .social-media a {
+            color: white;
+            /* Cor dos links de redes sociais */
+            margin: 0 10px;
+            /* Espaçamento entre os links */
+        }
+    </style>
+
+    <title>g1 - O portal de notícias da Globo</title>
+</head>
+
+<body>
+    <nav class="nav-sites">
+        <div id="site-button">
+            <a href="https://www.globo.com/"><button id="btn-1" class="nav-btn"
+                    style="color: #0669DE;">globo.com</button></a>
+            <a href="https://g1.globo.com/"><button id="btn-2" class="nav-btn" style="color: #C4170C;">g1</button></a>
+            <a href="https://ge.globo.com/"><button id="btn-3" class="nav-btn" style="color: #06AA48;">ge</button></a>
+            <a href="https://gshow.globo.com/"><button id="btn-4" class="nav-btn"
+                    style="color: #FF6700;">gshow</button></a>
+            <a href="https://globoplay.globo.com/?origemId=92434"><button id="btn-5" class="nav-btn"
+                    style="color: #FC0334;">globoplay</button></a>
+            <a href="https://g1.globo.com/jornal-nacional/"><button id="btn-6" class="nav-btn"
+                    style="color: #0F335F;">jornal nacional</button></a>
+            <a href="https://oglobo.globo.com/"><button id="btn-7" class="nav-btn" style="color: #1E4C9A;">o
+                    globo</button></a>
+        </div>
+
+        <div id="cad">
+            <button class="btn-cad" style="cursor: pointer">Assine já</button>
+            <button class="btn-cad" style="cursor: pointer">Conta globo</button>
+        </div>
+    </nav>
+
+    <nav class="main-nav">
+        <button>
+            <img src="../assets/images/g1/assets/images/assets/images/menu-icon.png" alt="" style="height: 25px; margin-right: 5px;">
+            MENU
+        </button>
+
+        <button>
+            <img src="../assets/images/g1/assets/images/assets/images/logo-icon.png" alt="" class="logo-img">
+        </button>
+
+        <div class="search-container">
+            <form action="/search" method="get" id="search-box">
+                <input type="search" name="query" placeholder="BUSCAR" id="search-input">
+                <button type="submit" id="search-button">
+                    <img src="../assets/images/g1/assets/images/assets/images/search-image.png" alt="Search">
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <nav class="nav-3">
+        <a
+            href="https://g1.globo.com/politica/eleicoes/2024/ao-vivo/eleicoes-municipais-2024-cobertura-ao-vivo-votacao-apuracao-primeiro-turno.ghtml">
+            <button id="vasco" style="border: none;">
+                <span>
+                    Eleições
+                </span>
+                <img src="../assets/images/g1/assets/images/assets/images/grade-icon.png" alt="grade-icon" style="height: 20px; width: 20px4;">
+            </button>
+        </a>
+    </nav>
+
+    <div class="materia-container">
+        <div class="materia-texto">
+            <h1>Infraestrutura precária em Pau dos Ferros/RN: população sofre com poluição, estradas esburacadas e
+                ausência de saneamento básico</h1>
+
+            <h2>Pau dos Ferros, Rio Grande do Norte — A pequena cidade do interior do nordeste sofre com diversos
+                problemas relacionados com o saneamento básico, mobilidade urbana e poluição das ruas. Problemas estes
+                que afetam a vida dos moradores que residem na cidade. </h2>
+            
+            <div class="autor-info">
+                <p class="feito-por"><strong>Feito por: Jean L. B. de Oliveira</strong></p>
+                <p class="atualizado-ha">02/12/2024 10:45</p>
+            </div>
+
+            <div class="share-btns">
+                <button>Facebook</button>
+                <button>WhatsApp</button>
+                <button>Compartilhar</button>
+            </div>
+
+            <img src="../assets/images/g1/assets/images/Sem título.png" alt="verstappen" style="height: 500px;">
+
+            <!-- 1° parágrafo -->
+
+            <h1 style="margin-top: 30px;">O Erro e a Repercussão</h1>
+
+            <p> história começou quando Gustavo entregou sua redação para o professor de português no início do mês. O
+                tema da redação era sobre a importância da fé e do respeito às tradições. No entanto, ao abordar o nome
+                de Deus, Gustavo cometeu um erro — ou, para muitos, uma irreverência — ao escrever “Deus” com ‘d’
+                minúsculo, algo que muitos moradores da cidade interpretaram como uma afronta à religião cristã, que
+                possui no nome de Deus uma das figuras mais sagradas.</p>
+
+            <blockquote>“Eu estava mais preocupado com a gramática do que com as questões religiosas. Foi um erro
+                simples, mas ao que parece, as pessoas não viram dessa forma”, contou Gustavo, durante entrevista
+                exclusiva. O jovem afirmou que não teve a intenção de desrespeitar a fé, mas, mesmo assim, o impacto de
+                sua ação foi imediato.</blockquote>
+
+            <blockquote>“Eu nunca imaginei que algo tão pequeno pudesse gerar uma confusão tão grande. Na escola, meus
+                colegas começaram a me olhar de forma diferente, como se eu fosse um pecador. E logo, o caso se espalhou
+                pela cidade como fogo em palha seca”, explicou Gustavo, visivelmente emocionado ao lembrar da reação da
+                comunidade.</blockquote>
+
+            <p>O episódio rapidamente se espalhou entre os moradores da cidade, muitos dos quais interpretaram a ação de
+                Gustavo como um ataque direto à santidade de Deus. O que parecia ser um simples erro de ortografia
+                tornou-se um evento de mobilização religiosa, com cultos especiais sendo realizados para orar pela
+                “cura” do jovem.</p>
+
+            <!-- fim -->
+
+            <!-- Gustavo e Max Falam Sobre o Feito -->
+
+            <h1 style="margin-top: 30px;">O Castigo Divino: A Transformação de Gustavo</h1>
+
+            <p>Poucos dias após o incidente, os primeiros sinais de que algo mais sério estava acontecendo começaram a
+                surgir. Gustavo começou a relatar dores nas pernas e uma fraqueza crescente, que inicialmente foi
+                tratada como uma doença comum. No entanto, conforme os sintomas se intensificaram, a condição física de
+                Gustavo piorou de maneira alarmante.</p>
+
+            <blockquote>“Ele ficou fraco, e suas pernas começaram a inchá-las. A princípio, pensávamos que era uma
+                simples virose, mas logo a situação se agravou. O que mais nos assustou foi que os médicos não
+                conseguiam explicar o que estava acontecendo com ele. Foi então que muitos começaram a acreditar que era
+                um castigo divino”, afirmou a mãe de Gustavo, Dona Maria Sousa, que tem demonstrado muita fé durante
+                todo o processo.</blockquote>
+
+            <p>Segundo os relatos de familiares e moradores, Gustavo começou a perder a capacidade de andar, e suas
+                pernas ficaram visivelmente deformadas, com uma paralisia que se alastrou progressivamente.</p>
+
+            <blockquote>“Eu não sabia o que fazer. Não acreditava em castigo divino até ver meu filho sofrer dessa
+                maneira. Todos os médicos dizem que não há explicação para o que aconteceu, e muitos aqui estão
+                convencidos de que ele recebeu a punição de Deus”, contou um dos tios de Gustavo, José Sousa, que mora
+                na mesma cidade e tem sido um dos principais apoiadores da ideia de que a situação de Gustavo é, de
+                fato, uma resposta divina.</blockquote>
+
+            <!-- fim -->
+
+            <!-- O que diz a ciência? -->
+
+            <h1 style="margin-top: 30px;">A Reação da Comunidade</h1>
+
+            <p>A cidade de Pau dos Ferrros, que sempre foi marcada pela religiosidade e pelo zelo pelas tradições
+                locais, rapidamente se dividiu em dois grupos. De um lado, aqueles que acreditaram que Gustavo estava
+                pagando pelo erro de desrespeitar o nome de Deus, e, do outro, aqueles que ainda questionam se a punição
+                é justa.</p>
+
+            <blockquote>“Esse menino foi rebelde contra Deus, e agora está pagando por isso. A Bíblia fala sobre como a
+                desobediência ao Senhor leva à punição. Para mim, o que aconteceu com ele é um reflexo claro disso”,
+                disse Dona Joana, uma moradora religiosa da cidade, que afirma ser testemunha de sinais divinos desde o
+                início do ocorrido.</blockquote>
+
+            <p>Por outro lado, alguns moradores começaram a se questionar se a punição seria uma forma exagerada de
+                tratar um erro humano. “Não estou dizendo que o que ele fez estava certo, mas será que Deus realmente
+                castigaria um jovem por um erro de gramática? Isso não parece justo”, comentou Marcos Oliveira, um
+                morador que, embora seja devoto, acredita que a fé deve ser acompanhada de misericórdia.</p>
+
+            <p>O caso ganhou tal proporção que até mesmo líderes religiosos de cidades vizinhas vieram até [Nome da
+                Cidade] para orar e apoiar as pessoas afetadas. Um pastor local, que preferiu não ser identificado,
+                afirmou que a punição de Gustavo deveria servir de lição para todos. “Deus é justo e também é
+                misericordioso. Mas também nos ensina que a irreverência e o desrespeito têm suas consequências. Este
+                jovem será lembrado como um exemplo de como precisamos reverenciar o nome de Deus”, disse o pastor.</p>
+
+            <!-- fim -->
+
+            <!-- Max Verstappen: "Eu nunca mais corro contra ele -->
+
+            <h1 style="margin-top: 30px;">O Impacto nas Redes Sociais e na Mídia Nacional"</h1>
+
+            <p>Nos últimos dias, o caso de Gustavo também gerou grande repercussão nas redes sociais. A história foi
+                amplamente compartilhada, e logo, debates sobre a relação entre fé, liberdade religiosa e a questão da
+                punição começaram a tomar forma em blogs e plataformas de notícias. Muitos internautas ficaram
+                divididos: alguns acreditaram que o castigo era justo, enquanto outros viam a situação como uma
+                evidência da intolerância religiosa.</p>
+
+            <p>Especialistas em teologia e psicologia também começaram a comentar o ocorrido, oferecendo explicações
+                sobre como o contexto social e religioso pode afetar a interpretação de eventos extraordinários como
+                este. Para o teólogo Ricardo Pereira, “não podemos negar que a religiosidade de uma comunidade pode,
+                sim, moldar as reações das pessoas diante de acontecimentos inexplicáveis, mas também é preciso ter
+                cautela para não cairmos na tentação de justificar qualquer sofrimento como sendo divino.”</p>
+
+            <blockquote> "Nunca mais! Eu estou acostumado a competir contra humanos, não contra... não sei nem como
+                descrever o Gustavo. Ele é um fenômeno da natureza."</blockquote>
+
+
+            <!-- fim -->
+
+            <!-- O Futuro de Gustavo -->
+
+            <h1 style="margin-top: 30px;">O Futuro de Gustavo</h1>
+
+            <p>Hoje, Gustavo está em tratamento intensivo, sendo acompanhado por médicos que ainda não conseguiram
+                encontrar uma explicação para a sua condição. O jovem, que antes tinha planos de ingressar na faculdade,
+                agora enfrenta um futuro incerto. Sua família tem buscado apoio de médicos especialistas e de pastores,
+                esperando uma possível recuperação, mas a comunidade continua a acreditar que seu destino está nas mãos
+                de algo maior.</p>
+
+            <blockquote>“A única coisa que posso fazer agora é esperar e aprender com tudo isso. Se realmente fui
+                punido, então que sirva de lição. Eu só quero ficar bem e seguir minha vida”, disse Gustavo, com um
+                semblante sério, mas cheio de esperança.</blockquote>
+
+            <p>A história de Gustavo Sousa levanta questões profundas sobre como a fé, a punição divina e os erros
+                humanos podem se entrelaçar de maneiras que desafiam a compreensão. Na cidade de Pau dos Ferros, sua
+                história já virou uma lenda local, e continuará a ser lembrada como um exemplo de como um simples ato
+                pode desencadear eventos imprevisíveis e transformar vidas para se</p>
+
+            <!-- fim -->
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 g1.globo.com: Todos os direitos reservados.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#privacidade">Política de Privacidade</a></li>
+                    <li><a href="#termos">Termos de Uso</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
