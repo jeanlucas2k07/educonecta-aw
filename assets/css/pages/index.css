@@ -172,3 +172,22 @@ body {
 #sobre {
     color: aliceblue;
 }
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 85%;
+    }
+
+    #inicio::before {
+     background: linear-gradient(
+        90deg,
+        #0c4cee 0%,
+        #2357da 52%,
+        rgba(0, 53, 186, 0.057) 70%
+    );
+
+
+}
+
+
+}
