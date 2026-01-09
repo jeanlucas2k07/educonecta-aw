@@ -1,3 +1,5 @@
+@import url('../components/header.css');
+@import url("../components/footer.css");
 :root {
     --main-color: #2166fd
 }
@@ -13,7 +15,7 @@
 
 
 section {
-    padding-top: 8rem;
+    padding-top: 10rem;
     min-height: 100vh;
     padding-inline: 9.375rem;
 }
