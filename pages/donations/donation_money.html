@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../assets/css/pages/donation_money.css">
     <title>Doação dinheiro</title>
 </head>
+
 <body>
-    
+
+    <main>
+
+        <section>
+
+            <h1>Preencha o <br>Formulário:</h1>
+
+            <form>
+
+                <section class="formulario">
+
+                    <div>
+                        <label for="Escolha_ONG" class="label-padrao">Escolha uma ONG</label>
+
+                        <br>
+                        <br>
+
+                        <input type="text" id="Escolha_ONG" name="Escolha_ONG"
+                            placeholder="Pesquise por uma ONG, escola..." required class="input-padrao">
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="Nome" class="label-padrao">Nome completo</label>
+
+                        <br><br>
+
+                        <input type="text" id="Nome" name="Nome"
+                            placeholder="Ex: Samuel Souza" required class="input-padrao">
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="Email" class="label-padrao">Email</label>
+
+                        <br><br>
+
+                        <input type="text" id="Email" name="Email"
+                            placeholder="Ex: samuel@gmail.completo" required class="input-padrao">
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="Mensagem" class="label-padrao">Mensagem de doação:</label>
+
+                        <br><br>
+
+                        <textarea id="Mensagem" name="Mensagem" rows="10" cols="30"
+                            placeholder="Max. 200 caracteres" required class="input-mensagem"></textarea>
+
+                    </div>
+
+                    <br>
+
+                    <!-- <div class="meio-pagamento">
+
+                        <div class="pagamento-forma">
+                            
+                            <p>Cartão</p>
+
+                        </div>
+
+                         <div class="pagamento-forma">
+                            <p>Boleto</p>
+                        </div>
+
+                         <div class="pagamento-forma">
+                            <p>Pix</p>
+                        </div>
+
+                    </div> -->
+
+                    <div>
+
+                        <input type="submit" value="Finalizar Doação" class="input-concluir">
+
+
+                    </div>
+
+
+                </section>
+
+            </form>
+
+
+    </main>
+
 </body>
+
 </html>
