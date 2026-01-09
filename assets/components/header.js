@@ -12,7 +12,7 @@ class Header extends HTMLElement {
                     <ul>
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="./pages/donation.html">Doar</a></li>
+                        <li><a href="./pages/donations/donation.html">Doar</a></li>
                         <li><a href="#">Metas</a></li>
                         <li><a href="#">Relatos</a></li>
                     </ul>
