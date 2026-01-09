@@ -8,7 +8,7 @@ body {
 
 #inicio {
     position: relative;
-    background-image: url('../../images/fundo.png');
+    background-image: url('../../images/index/fundo.png');
 
     background-size: contain;
     background-position: right;
