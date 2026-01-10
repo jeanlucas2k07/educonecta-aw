@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../assets/css/pages/donation_time.css">
+    <title>Doação de tempo</title>
+</head>
+
+<body>
+
+    <main>
+
+        <section class="formulario">
+
+            <h1>Preencha o <br>Formulário:</h1>
+
+            <form>
+                <div class="campo">
+                    <label for="Titulo">Titulo</label>
+
+                    <input type="text" id="Titulo" name="Titulo" placeholder="Ex: Aula sobre função do 1° Grau"
+                        required>
+
+                </div>
+
+                <div class="campo">
+                    <label for="Descrição">Descrição:</label>
+
+                    <textarea id="Descrição" name="Descrição" rows="10" cols="30" placeholder="Max. 200 caracteres"
+                        required></textarea>
+
+                </div>
+
+                <div class="campo">
+                    <label for="Publico_Alvo">Publico alvo:</label>
+
+                    <select>
+                        <option selected disabled value="" id="Publico_Alvo">Selecione</option>
+                        <option value="Jovem">Jovem</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="idade avançada">Idade avançada</option>
+                        <option value="todas_idades">Todas as idades</option>
+                    </select>
+
+                </div>
+
+                <div class="campo">
+                    <label for="link_aula">Link da aula:</label>
+
+                    <input type="url" id="link_aula" name="link_aula" placeholder="Ex: https://www.youtube.com/aula"
+                        required>
+
+                </div>
+
+                <div class="campo">
+                    <label for="video_aula">Vídeo da Aula (opcional):</label>
+
+                </div>
+
+                <div class="upload">
+
+                    <img src="../../assets/images/donations/icone_anexar_video.png" alt="Exemplo">
+
+                    <input type="file" name="video_aula" id="video_aula" accept="video/*">
+                </div>
+
+                <div class="campo">
+                    <label for="arquivo_aula">Arquivos da aula (opcional):</label>
+
+                </div>
+
+                <div class="upload">
+
+                    <img src="../../assets/images/donations/icone_anexar_arquivo.png" alt="Exemplo">
+
+                    <input type="file" name="arquivo_aula" id="arquivo_aula" accept=".pdf,.doc,.ppt,.xls,.txt">
+                </div>
+
+                <div class="campo">
+
+                    <input type="submit" value="Finalizar Doação" class="input-concluir">
+
+                </div>
+
+
+            </form>
+
+
+    </main>
+
+</body>
+
+</html>

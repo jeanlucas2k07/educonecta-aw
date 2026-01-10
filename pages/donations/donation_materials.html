@@ -13,76 +13,62 @@
 
     <main>
 
-        <section>
+        <section class="formulario">
 
             <h1>Preencha o <br>Formulário:</h1>
 
             <form>
+                <div class="campo">
+                    <label for="Titulo">Titulo</label>
 
-                <section class="formulario">
+                    <input type="text" id="Titulo" name="Titulo" placeholder="Ex: As crônicas de narnia" required>
 
-                    <div>
-                        <label for="Titulo" class="label-padrao">Titulo</label>
+                </div>
 
-                        <br>
-                        <br>
+                <div class="campo">
+                    <label for="Editora">Editora</label>
 
-                        <input type="text" id="Titulo" name="Titulo"
-                            placeholder="Ex: As crônicas de narnia" required class="input-padrao">
+                    <input type="text" id="Editora" name="Editora" placeholder="Ex: Editora Saraiva" required>
 
-                    </div>
+                </div>
 
-                    <br>
+                <div class="campo">
+                    <label for="Autor">Autor</label>
 
-                    <div>
-                        <label for="Editora" class="label-padrao">Editora</label>
+                    <input type="text" id="Autor" name="Autor" placeholder="Ex: C.S. Lewis" required>
 
-                        <br><br>
+                </div>
 
-                        <input type="text" id="Editora" name="Editora"
-                            placeholder="Ex: Editora Saraiva" required class="input-padrao">
+                <div class="campo">
+                    <label for="Estado_Conservação">Estado de conservação:</label>
 
-                    </div>
+                    <select>
+                        <option selected disabled value="" id="Estado_Conservação">Selecione</option>
+                        <option value="Novo">Novo</option>
+                        <option value="Péssimo">Péssimo</option>
+                        <option value="Ruim">Ruim</option>
+                    </select>
 
-                    <br>
+                </div>
 
-                    <div>
-                        <label for="Autor" class="label-padrao">Autor</label>
+                <div class="campo">
+                    <label for="foto" >Foto do livro (opcional):</label>
 
-                        <br><br>
+                </div>
 
-                        <input type="text" id="Autor" name="Autor"
-                            placeholder="Ex: C.S. Lewis" required class="input-padrao">
+                <div class="upload">
 
-                    </div>
+                    <img src="../../assets/images/donations/icone_anexar_foto].png" alt="Exemplo">
 
-                    <br>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </div>
 
-                    <div>
-                        <label for="Estado_Conservação" class="label-padrao">Estado de conservação:</label>
+                <div class="campo">
 
-                        <br><br>
+                    <input type="submit" value="Finalizar Doação" class="input-concluir">
 
-                        <select class="input-padrao">
-                            <option selected disabled value="" id="Estado_Conservação">Selecione</option>
-                            <option value="Novo">Novo</option>
-                            <option value="Péssimo">Péssimo</option>
-                            <option value="Ruim">Ruim</option>
-                        </select>
+                </div>
 
-                    </div>
-
-                    <br>
-
-                    <div>
-
-                        <input type="submit" value="Finalizar Doação" class="input-concluir">
-
-
-                    </div>
-
-
-                </section>
 
             </form>
 
